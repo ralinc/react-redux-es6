@@ -4,14 +4,14 @@ This is just a playground for learning and trying out things.
 
 ### Setup
 
-1. Install dependencies
+###### Install dependencies
 
 `npm install`
 
-2. Start application
+###### Start application
 
 `npm start -s`
 
-3. Run tests
+###### Run tests
 
 `npm test`
