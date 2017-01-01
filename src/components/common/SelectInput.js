@@ -20,7 +20,7 @@ const SelectInput = ({name, label, onChange, defaultOption, value, error, option
       </div>
     </div>
   );
-}
+};
 
 SelectInput.propTypes = {
   name: PropTypes.string.isRequired,

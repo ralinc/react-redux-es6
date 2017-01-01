@@ -19,16 +19,16 @@ const TextInput = ({name, label, onChange, placeholder, value, error}) => {
           value={value}
           onChange={onChange}
         />
-        {error && <div class="alert alert-danger">{error}</div>}
+        {error && <div className="alert alert-danger">{error}</div>}
       </div>
     </div>
   );
-}
+};
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  onChanage: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
   error: PropTypes.string
