@@ -53,13 +53,22 @@ ManageCoursePage.contextTypes = {
   router: PropTypes.object
 };
 
-function mapStateToProps(state) {
-  let course = {
-    id: '',
-    title: '',
-    authorId: '',
-    category: ''
-  };
+function getCourseById(courses, courseId) {
+  const course = courses.filter(course => course.id === courseId);
+  return course ? course[0] : null;
+}
+
+function mapStateToProps(state, ownProps) {
+  const courseId = ownProps.params.id;
+  let course;
+
+  if (courseId && state.courses.length) {
+    course = getCourseById(state.courses, courseId);
+  } else {
+    course = {
+      id: '', title: '', authorId: '', category: ''
+    };
+  }
 
   const authors = state.authors.map(author => {
     return {
