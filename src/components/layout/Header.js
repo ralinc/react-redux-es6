@@ -4,14 +4,16 @@ import Loading from '../common/Loading';
 
 const Header = ({loading}) => {
   return (
-    <nav>
-      <IndexLink to="/" activeClassName="active">Home</IndexLink>
-      {" | "}
-      <Link to="/about" activeClassName="active">About</Link>
-      {" | "}
-      <Link to="/courses" activeClassName="active">Courses</Link>
+    <header>
+      <nav>
+        <IndexLink to="/" activeClassName="active">Home</IndexLink>
+        {" | "}
+        <Link to="/about" activeClassName="active">About</Link>
+        {" | "}
+        <Link to="/courses" activeClassName="active">Courses</Link>
+      </nav>
       {loading && <Loading interval={100} dots={20} />}
-    </nav>
+    </header>
   );
 };
 
