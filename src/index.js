@@ -8,6 +8,7 @@ import routes from './routes';
 import { loadAuthors } from './actions/authorActions';
 import { loadCourses } from './actions/courseActions';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/toastr/build/toastr.min.css';
 import './styles/styles.css';
 
 const store = configureStore();
